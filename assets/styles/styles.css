@@ -1,0 +1,246 @@
+/* 
+=============================================
+Variables
+=============================================
+*/
+:root {
+  --clr-primary: ;
+  --clr-secondary: ;
+
+  --bg-primary-color: ;
+  --bg-secondary-color: ;
+
+  --border-radius: ;
+
+  --font-family: 'Open Sans', sans-serif;
+  --fs-primary-heading: 3.5rem;
+  --fs-secondary-heading: 1.3rem;
+  --fs-element: 2rem;
+  --fs-paragraph: 1rem;
+
+  --fs--button: 0.8125rem;
+
+  --fw-700: 700;
+  --fw-500: 500;
+  --fw-400: 400;
+  --fw-300: 300;
+}
+
+/* 
+=============================================
+Styles Reset
+=============================================
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remueve margen predeterminado */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Eliminar estilos de lista en elementos ul, ol con un rol de lista */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Smooth scrolling */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Los elementos que no tienen una clase obtienen estilos predeterminados */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hacer que las imágenes sean más fáciles de trabajar */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Heredar fuentes para entradas y botones */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Elimine todas las animaciones, transiciones y desplazamiento suave para las personas que prefieren no verlos */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+/*     animation-duration: 0.01ms !important; */
+/*     animation-iteration-count: 1 !important; */
+    scroll-behavior: auto !important;
+ /*    transition-duration: 0.01ms !important; */
+  }
+}
+
+/* 
+=============================================
+Buttons
+=============================================
+*/
+
+
+/* 
+=============================================
+Styles
+=============================================
+*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 150px;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.open-btn {
+  position: fixed;
+  top: 0.625rem;
+  left: 0.625rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: 0.9s ease-in-out;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  background-color: rgb(34, 31, 31);
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  transition-delay: 0.2s;
+}
+
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  background-color: rgb(229, 9, 20);
+  width: 95%;
+  transition-delay: 0.1s;
+}
+
+.nav-red.visible {
+  transition-delay: 0.1s;
+}
+
+.nav-white {
+  background-color: #fff;
+  width: 95%;
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.nav-white.visible {
+  transition-delay: 0s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  opacity: 0.3;
+}
+
+.list {
+  padding: 0;
+}
+
+.list li {
+  margin: 1.2rem 0;
+}
+
+.list li a {
+  color: rgb(34, 31, 31);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 0.8rem 0.5rem;
+}
+
+.list li a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.list ul {
+  padding-left: 1.25rem;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  margin: 1.2rem 1rem;
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  color: rgb(34, 31, 31);
+  text-transform: uppercase;
+}
